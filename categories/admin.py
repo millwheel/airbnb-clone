@@ -4,4 +4,5 @@ from .models import Category
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("name", "kind")
+    list_filter = ("kind",)
