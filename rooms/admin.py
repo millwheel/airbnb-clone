@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Room, Amenity
 
-
+# admin panel for filter
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
     list_display = ("name", "price", "kind", "owner", "created_at", "updated_at")
@@ -13,8 +13,6 @@ class RoomAdmin(admin.ModelAdmin):
         "toilets",
         "kind",
         "amenities",
-        "created_at",
-        "updated_at",
     )
 
 

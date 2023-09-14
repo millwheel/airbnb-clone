@@ -3,6 +3,8 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
+
+    # Create choices
     class GenderChoices(models.TextChoices):
         MALE = ("male", "Male")
         FEMALE = ("female", "Female")
@@ -15,6 +17,7 @@ class User(AbstractUser):
         WON = "won", "Korean Won"
         USD = "usd", "Dollar"
 
+    # create field
     first_name = models.CharField(max_length=150, editable=False)
     last_name = models.CharField(max_length=150, editable=False)
     avatar = models.ImageField(blank=True)
